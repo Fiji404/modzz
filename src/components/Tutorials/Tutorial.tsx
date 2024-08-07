@@ -28,7 +28,7 @@ export const Tutorial = ({ heading, desc, content, summary, authors, i }: Props)
             <motion.li
                 initial={{ translateY: '-20px', opacity: 0 }}
                 animate={{ translateY: '0', opacity: 1 }}
-                transition={{delay: i * 0.2, duration: '1'}}
+                transition={{delay: i * 0.4}}
                 onClick={clickTutorialHandler}
                 className="max-w-[520px] cursor-pointer rounded-md border-[#ccc] bg-[#f3000c31] px-2 py-2 text-white hover:bg-[#f3000c62]"
             >

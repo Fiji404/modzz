@@ -9,12 +9,33 @@ interface Props {
     onClick(): void;
 }
 
+interface TutorialPointProps {
+    text: string;
+    img: string;
+}
+
+const TutorialPoint = ({ text, img }: TutorialPointProps) => {
+    return (
+        <li className="flex flex-col items-center gap-2">
+            <h2 className="text-2xl font-semibold text-white">{text}</h2>
+            <img className="max-w-[800px] rounded-md" src={img} />
+        </li>
+    );
+};
+
 export const TutorialPopup = ({ content, heading, summary, authors, onClick }: Props) => {
     return (
         <>
             <motion.div
                 className="custom-scroll fixed left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-md border border-[#383838] bg-black p-3"
-                initial={{ width: '90%', height: '80vh', translateX: '-50%', translateY: '-50%', scale: 0.4, opacity: 0 }}
+                initial={{
+                    width: '90%',
+                    height: '80vh',
+                    translateX: '-50%',
+                    translateY: '-50%',
+                    scale: 0.4,
+                    opacity: 0,
+                }}
                 animate={{ translateX: '-50%', translateY: '-50%', scale: 1, opacity: 1 }}
                 exit={{ translateX: '-50%', translateY: '-50%', scale: 0.4, opacity: 0 }}
             >
@@ -29,10 +50,7 @@ export const TutorialPopup = ({ content, heading, summary, authors, onClick }: P
                 <h2 className="mb-6 text-center text-4xl font-bold text-[#b41111] underline">{heading}</h2>
                 <ul className="flex flex-col items-center gap-10">
                     {content.map(({ text, img }) => (
-                        <li className="flex flex-col items-center gap-2" key={text}>
-                            <h2 className="text-2xl font-semibold text-white">{text}</h2>
-                            <img className="max-w-[800px] rounded-md" src={img} />
-                        </li>
+                        <TutorialPoint text={text} img={img} />
                     ))}
                 </ul>
                 <p className="mt-4 text-center text-2xl font-medium text-white">{summary}</p>

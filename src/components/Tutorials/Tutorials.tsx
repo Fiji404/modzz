@@ -6,17 +6,17 @@ const TUTORIALS_CONTENT = [
         heading: 'Jak uniknąć usuwania pobranych plików',
         desc: 'Jeśli Twój system usuwa tobie pliki, które pobrałeś to tutaj znajdziesz rozwiązanie',
         content: [
-            { text: '1. Klikamy w lupę na pasku zadań', img: '/src/assets/TutorialDefender/desktop.png' },
+            { text: '1. Klikamy w lupę na pasku zadań', img: '/TutorialDefender/desktop.png' },
             {
                 text: '2. Wpisujemy podaną frazę: Wyklucz foldery z indeksowania',
-                img: '/src/assets/TutorialDefender/search.png',
+                img: '/TutorialDefender/search.png',
             },
-            { text: '3. Klikamy na "Dodaj wykluczony folder"', img: '/src/assets/TutorialDefender/defender.png' },
-            { text: '4. Szukamy folderu który chcemy wykluczyć', img: '/src/assets/TutorialDefender/find-folder.png' },
-            { text: '5. Klikamy wybierz folder', img: '/src/assets/TutorialDefender/pick-folder.png' },
+            { text: '3. Klikamy na "Dodaj wykluczony folder"', img: '/TutorialDefender/defender.png' },
+            { text: '4. Szukamy folderu który chcemy wykluczyć', img: '/TutorialDefender/find-folder.png' },
+            { text: '5. Klikamy wybierz folder', img: '/TutorialDefender/pick-folder.png' },
             {
                 text: '6. Sprawdzamy czy folder dodał się do listy i gotowe :)',
-                img: '/src/assets/TutorialDefender/check.png',
+                img: '/TutorialDefender/check.png',
             },
         ],
         summary:
@@ -115,7 +115,7 @@ export const Tutorials = () => {
         <main className="mx-auto max-w-[1600px] py-6">
             <header>
                 <Heading>Poradniki</Heading>
-                <p className="hide mt-1 mx-auto max-w-[620px] text-center text-[#7a7a7a]">
+                <p className="hide mx-auto mt-1 max-w-[620px] text-center text-[#7a7a7a]">
                     Masz problem z menu, grą, nie wiesz dlaczego coś nie działa? Spokojnie na tej stronie znajdziesz
                     wszystkie poradniki, które wyjaśnią Ci krok po kroku jak rozwiązać Twój problem.
                 </p>
